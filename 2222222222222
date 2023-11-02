@@ -1,0 +1,40 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class Tetris extends JPanel implements ActionListener {
+
+    private Timer timer;
+
+    public Tetris() {
+        timer = new Timer(500, this); // Imposta il timer per l'aggiornamento del gioco
+        timer.start();
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        // Aggiorna la logica del gioco qui
+        // Ad esempio, sposta il pezzo in giù o controlla le collisioni
+    }
+
+    @Override
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+
+        // Disegna il campo da gioco e i pezzi qui
+
+        // Esempio di disegno di un rettangolo
+        g.setColor(Color.blue);
+        g.fillRect(100, 100, 30, 30);
+    }
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Tetris");
+        Tetris tetris = new Tetris();
+        frame.add(tetris);
+        frame.setSize(300, 600);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+}

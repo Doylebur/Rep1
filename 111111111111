@@ -19,12 +19,7 @@ if 'Time Series (Daily)' in data:
 if 'Time Series (Daily)' in data:
     daily_data = data['Time Series (Daily)']
 
-    for date, info in daily_data.items():
-        open_price = info['1. open']
-        high_price = info['2. high']
-        low_price = info['3. low']
-        close_price = info['4. close']
-        volume = info['6. volume']
+    f     volume = info['6. volume']
   
 else:
 
